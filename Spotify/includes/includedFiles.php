@@ -8,8 +8,8 @@
 	else{
 		include("includes/header.php");
 		include("includes/footer.php");
-		$url = $_SERVER['REQEUEST_URI'];
-		echo "<script>openPage('url')</script>";
+		$url = $_SERVER['REQUEST_URI'];
+		echo "<script>openPage('$url')</script>";
 		exit();
 	}
 ?>
