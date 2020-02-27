@@ -40,11 +40,17 @@ $(document).on("change", "select.playlist", function(){
 	});
 });
 
+function logout(){
+	$.post("includes/handlers/ajax/logout.php", function(){
+		location.reload();
+	});
+}
+
 function openPage(url){
 
 	if(timer != null){
 		clearTimeout(timer);
-	}
+	} 
 
 	if(url.indexOf("?") == -1){
 		url = url + "?";
